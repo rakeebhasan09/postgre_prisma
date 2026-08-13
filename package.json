@@ -1,0 +1,35 @@
+{
+    "name": "postgre-prisma",
+    "version": "1.0.0",
+    "description": "Start Learning Postgre and Prisma ORM",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "dev": "ts-node-dev --respawn --transpile-only src/server.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/rakeebhasan09/postgre_prisma.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/rakeebhasan09/postgre_prisma/issues"
+    },
+    "homepage": "https://github.com/rakeebhasan09/postgre_prisma#readme",
+    "dependencies": {
+        "@prisma/client": "^7.9.1",
+        "@types/cors": "^2.8.19",
+        "@types/express": "^5.0.6",
+        "cors": "^2.8.6",
+        "dotenv": "^17.4.2",
+        "express": "^5.2.1",
+        "ts-node-dev": "^2.0.0"
+    },
+    "devDependencies": {
+        "prisma": "^7.9.1",
+        "typescript": "^7.0.2"
+    }
+}
