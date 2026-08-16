@@ -5,7 +5,7 @@
 
 generator client {
   provider = "prisma-client"
-  output   = "../generated/prisma"
+  output   = "../src/generated/prisma"
 }
 
 datasource db {
@@ -15,19 +15,35 @@ datasource db {
 model User {
   id String @id @default(uuid())
   name String
-  username String
-  email String
+  email String @unique
   password String
   role UserRole @default(User)
-  avater String?
+  orders Orders[]
 
   @@map("users")
-  @@unique([username, email])
-  @@index([username, email])
 }
 
 enum UserRole {
   User
   Admin
   Manager
+}
+
+model Products {
+  id String @id @default(uuid())
+  title String
+  description String?
+  price Int
+  stock Int
+
+  @@map("products")
+} 
+
+model Orders{
+  id String @id @default(uuid())
+  userId String
+  user User @relation(fields: [userId], references: [id])
+  quantity Int
+
+  @@map("orders")
 }
