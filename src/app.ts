@@ -1,9 +1,12 @@
-import express, { Router } from "express";
+import express from "express";
 import cors from "cors";
+import router from "./services/products";
 const app = express();
 app.use(cors());
 app.use(express.json());
-app.use("/", Router);
+app.use(express.urlencoded({ extended: true }));
+
+app.use("/", router);
 
 app.get("/", (req, res) => {
     res.json({

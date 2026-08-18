@@ -7,7 +7,6 @@ const router = Router();
 router.post("/products", async (req, res) => {
     try {
         const productData = req.body;
-        console.log("Received product data:", productData);
         const data = await prisma.products.create(productData);
         res.json({
             success: true,
@@ -23,3 +22,5 @@ router.post("/products", async (req, res) => {
         });
     }
 });
+
+export default router;
