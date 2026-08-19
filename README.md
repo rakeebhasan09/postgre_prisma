@@ -50,3 +50,5 @@ Content-Type: application/json
 - If `DATABASE_URL` is missing or invalid, correct `.env` and restart the server.
 - If the database tables do not exist, run `npx prisma migrate dev`.
 - If Postman reports `Cannot POST /products`, verify the URL and method exactly: `POST http://localhost:5000/products`.
+
+today i solve the create new products path not found problem. This is the very frist request using prisma and postgresql. I explore those and trining to level up my development journy.
